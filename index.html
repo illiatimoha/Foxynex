@@ -43,7 +43,7 @@
             </ul>
          </nav>
          <div class="header-button">
-            <a href="#">Exchange</a>
+            <a href="#exchange">Exchange</a>
          </div>
 
          <div class="header-burger">
@@ -61,7 +61,7 @@
                <h1>New modern cryptocurrency exchange platform — <span>Etherswapping</span></h1>
                <h2>We are happy to present you new biggest service to exchange your cryptocurrency. You can easily
                   exchange
-                  every coin listed on Binance with lowest fee!</h2>
+                  every coin listed on Binance with the lowest fee!</h2>
                <img src="./img/global-img.png" alt="Etherswapping">
                <a class="global-button" href="#exchange">Exchange</a>
             </div>
@@ -298,18 +298,18 @@
                <div class="form-item form-input">
 
                   <h2>FILL THE FIELDS</h2>
-                  <label id="fromCurrency2" onclick="showCurrencyName2()"> YOU RESIVE BTC</label>
+                  <label id="fromCurrency2" onclick="showCurrencyName2()"> YOU RECEIVE BTC</label>
                   <P class="input-send">You send </P>
 
                   <input itemid="fromCurrency2" name="value-1" type="text" id="amount2" placeholder="Enter Amount"
                      required>
 
-                  <label id="toCurrency2"> YOU RESIVE USDT</label>
+                  <label id="toCurrency2"> YOU RECEIVE USDT</label>
                   <P class="input-req">You get </P>
 
-                  <input type="text" name="value-2" id="result2" placeholder="Enter Amount" required>
+                  <input type="text" name="value-2" id="result2" required readonly>
 
-                  <label id="toCurrency2"> Adress</label>
+                  <label id="toCurrency2"> Address</label>
 
                   <input type="text" name="addres" id="toCurrency2" placeholder="Enter adress" required>
 
@@ -318,7 +318,7 @@
 
                   <input type="email" name="Email" id="Email" placeholder="Enter Email" required>
 
-                  <label id="Refferal"> Refferal Code</label>
+                  <label id="Refferal"> Referral Code</label>
 
                   <input type="text" name="Refferal" id="Refferal" placeholder="Enter Refferal Code" required>
 
@@ -327,12 +327,8 @@
                      <input type="checkbox" name="radio" id="radio" required>
                      <label id="radio" for="radio"> Agree with site <a class="input-a"
                            href="rules.html">rules</a></label>
-
                   </div>
-
                   <button id="convert2" type="submit">Обменять</button>
-
-
                </div>
 
 
@@ -499,7 +495,7 @@
          const toCurrencySelect2 = document.querySelector('input[name="ETH"]:checked').value;
 
          var selectCurrency = document.getElementById("toCurrency2");
-         var currencyName = selectCurrency.innerHTML = `You Resive ${toCurrencySelect2}`;
+         var currencyName = selectCurrency.innerHTML = `You Receive ${toCurrencySelect2}`;
 
          var selectCurrency2 = document.getElementById("fromCurrency2");
          var currencyName2 = selectCurrency2.innerHTML = `You Send ${fromCurrencySelect2}`;
@@ -512,7 +508,7 @@
 
          console.log(toCurrencySelect2)
          var currencyName3 = inputSend.innerHTML = `You send ${amount2} \ ${fromCurrency2}`;
-         // var currencyName4 = inputSend2.innerHTML = `You resive  ${amount3} \ ${toCurrency2}`;
+         // var currencyName4 = inputSend2.innerHTML = `You receive  ${amount3} \ ${toCurrency2}`;
 
 
          const apiKey = "685419b6bedfb725bb6af07ed3dd6fef8f20a83f05c066d1eb20a10c563c7801";
@@ -533,7 +529,7 @@
                   const rate2 = data[fromCurrency2];
 
 
-                  const result2 = (amount2 / rate2) * 1.3;
+                  const result2 = (amount2 / rate2) * 1.03;
 
                   resultParagraph2.value = `${(result2).toFixed(3)} `;
 
@@ -543,8 +539,8 @@
                   const rate2 = data[fromCurrency2];
 
 
-                  const result2 = (amount2 / rate2) * 1.4;
-                  var currencyName4 = inputSend2.innerHTML = `You resive  ${result2.toFixed(3)} \ ${toCurrency2}`;
+                  const result2 = (amount2 / rate2) * 1.04;
+                  var currencyName4 = inputSend2.innerHTML = `You receive  ${result2.toFixed(3)} \ ${toCurrency2}`;
 
                   resultParagraph2.value = `${(result2).toFixed(3)} `;
                   return
@@ -554,8 +550,8 @@
                   const rate2 = data[fromCurrency2];
 
 
-                  const result2 = (amount2 / rate2) * 1.2;
-                  var currencyName4 = inputSend2.innerHTML = `You resive  ${result2.toFixed(3)} \ ${toCurrency2}`;
+                  const result2 = (amount2 / rate2) * 1.02;
+                  var currencyName4 = inputSend2.innerHTML = `You receive  ${result2.toFixed(3)} \ ${toCurrency2}`;
 
                   resultParagraph2.value = `${(result2).toFixed(3)} `;
                   return
@@ -565,7 +561,7 @@
 
 
                   const result2 = (amount2 / rate2) * 1.025;
-                  var currencyName4 = inputSend2.innerHTML = `You resive  ${result2.toFixed(3)} \ ${toCurrency2}`;
+                  var currencyName4 = inputSend2.innerHTML = `You receive  ${result2.toFixed(3)} \ ${toCurrency2}`;
 
                   resultParagraph2.value = `${(result2).toFixed(3)} `;
                   return
@@ -574,7 +570,7 @@
 
                const rate2 = data[fromCurrency2];
                const result2 = amount2 / rate2;
-               var currencyName4 = inputSend2.innerHTML = `You resive  ${result2.toFixed(3)} \ ${toCurrency2}`;
+               var currencyName4 = inputSend2.innerHTML = `You receive  ${result2.toFixed(3)} \ ${toCurrency2}`;
 
                const resultMath = result2
                // resultParagraph2.value = `${result2.toFixed(6)} `;
